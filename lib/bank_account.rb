@@ -12,6 +12,7 @@ class BankAccount
   def set_name(name)
     raise NameChangeError, "Cannot change account holder name." if !@name==nil
     @name = name
+  end
 
 end
 
