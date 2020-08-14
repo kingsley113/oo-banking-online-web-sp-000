@@ -1,8 +1,8 @@
 require 'pry'
 
 class BankAccount
-  attr_accessor :status
-  attr_reader :balance, :name
+  attr_accessor :status, :balance
+  attr_reader :name
 
   def initialize(name)
     @name = name=(name)
@@ -16,5 +16,10 @@ class BankAccount
     @name.freeze!
   end
 end
+
+  def deposit(amount)
+    @balance += amount
+  end
+
 
 class NameChangeError < TypeError; end
