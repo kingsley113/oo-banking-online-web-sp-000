@@ -2,7 +2,7 @@ class BankAccount
   attr_accessor :name, :balance
 
   def initialize(name)
-    @account = name
+    @name = name
     @balance = 0
   end
 
