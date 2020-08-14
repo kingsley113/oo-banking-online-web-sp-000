@@ -17,7 +17,7 @@ class BankAccount
     @name = name.freeze
     @name
   end
-
+binding.pry
 end
 
 class NameChangeError < TypeError; end
