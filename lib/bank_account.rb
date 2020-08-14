@@ -1,8 +1,11 @@
+require 'pry'
+
 class BankAccount
   attr_accessor :status
   attr_reader :balance, :name
 
   def initialize(name)
+    binding.pry
     name=(name)
     @name
     @balance = 1000
