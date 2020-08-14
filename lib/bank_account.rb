@@ -1,17 +1,16 @@
 class BankAccount
-  attr_accessor :name, :status
-  attr_reader :balance
+  attr_accessor :status
+  attr_reader :balance, :name
 
   def initialize(name)
-    @name = nil
-    set_name(name)
+    name=(name)
     @balance = 1000
     @status = "open"
   end
 
-  def set_name(name)
-    raise NameChangeError, "Cannot change account holder name." if !@name==nil
-    @name = name
+  def name=(name)
+    raise NameChangeError, "Cannot change account holder name." if !@name.is frozen?
+    @name = name.freeze
   end
 
 end
