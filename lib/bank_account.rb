@@ -7,7 +7,7 @@ class BankAccount
   def initialize(name)
     binding.pry
     name=(name)
-    @name
+    
     @balance = 1000
     @status = "open"
   end
@@ -15,6 +15,7 @@ class BankAccount
   def name=(name)
     raise NameChangeError, "Cannot change account holder name." if !@name.is frozen?
     @name = name.freeze
+    @name
   end
 
 end
