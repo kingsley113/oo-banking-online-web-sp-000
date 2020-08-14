@@ -14,8 +14,8 @@ class BankAccount
 
   def name=(name)
     raise NameChangeError, "Cannot change account holder name." if !@name.is frozen?
-    @name = name.freeze
-    @name
+    @name = name
+    @name.freeze!
   end
 binding.pry
 end
