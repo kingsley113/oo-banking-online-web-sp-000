@@ -14,4 +14,13 @@ class Transfer
     sender.valid? && receiver.valid?
   end
 
+  def execute_transation(sender, receiver, amount)
+    if @status == "pending" && (sender.balance >= amount)
+      sender.withdraw(amount)
+      receiver.deposit(amount)
+    else
+      false
+    end
+  end
+
 end
