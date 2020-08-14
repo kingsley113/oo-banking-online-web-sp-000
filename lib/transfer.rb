@@ -18,6 +18,7 @@ class Transfer
     if @status == "pending" && (sender.balance >= amount)
       sender.withdraw(amount)
       receiver.deposit(amount)
+      @status = "complete"
     else
       false
     end
