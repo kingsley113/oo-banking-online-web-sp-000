@@ -5,9 +5,7 @@ class BankAccount
   attr_reader :balance, :name
 
   def initialize(name)
-    # binding.pry
     @name = name=(name)
-
     @balance = 1000
     @status = "open"
   end
@@ -17,7 +15,6 @@ class BankAccount
     @name = name
     @name.freeze!
   end
-# binding.pry
 end
 
 class NameChangeError < TypeError; end
