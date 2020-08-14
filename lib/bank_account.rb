@@ -1,8 +1,8 @@
 class BankAccount
-  attr_accessor :account, :balance
+  attr_accessor :name, :balance
 
-  def initialize(account)
-    @account = account
+  def initialize(name)
+    @account = name
     @balance = 0
   end
 
