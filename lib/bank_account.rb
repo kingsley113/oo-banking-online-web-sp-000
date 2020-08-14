@@ -5,7 +5,7 @@ class BankAccount
   attr_reader :balance, :name
 
   def initialize(name)
-    binding.pry
+    # binding.pry
     name=(name)
 
     @balance = 1000
