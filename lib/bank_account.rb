@@ -15,11 +15,10 @@ class BankAccount
     @name = name
     @name.freeze!
   end
-end
 
-  def self.deposit(amount)
+  def deposit(amount)
     @balance += amount
   end
-
+end
 
 class NameChangeError < TypeError; end
